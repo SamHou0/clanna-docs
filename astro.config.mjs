@@ -4,6 +4,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+    site: "https://docs.clanna.dev",
     integrations: [
         starlight({
             title: 'ClanNA Docs',
@@ -11,7 +12,7 @@ export default defineConfig({
             logo: {
                 src: './src/assets/icon.webp',
             },
-            favicon: './src/assets/icon.png',
+            favicon: '/favicon.png',
             locales: {
                 root: {
                     label: '简体中文',
@@ -19,6 +20,9 @@ export default defineConfig({
                 },
             },
             defaultLocale: 'zh-cn',
+            editLink: {
+                baseUrl: 'https://github.com/SamHou0/clanna-docs/edit/main/',
+            },
             social: [{ icon: 'matrix', label: 'Matrix Chat', href: 'hhttps://matrix.to/#/#chat:clanna.dev' }]
         }),
     ],
